@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계획표 시간계산</title>
+    <style>
+        body h2 {
+            text-align: center;
+        }
+
+        body ul {
+            text-align: center;
+            list-style-type: none;
+        }
+
+        body ul li {
+            padding: 10px;
+        }
+
+        body img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            padding: 20px;
+        }
+        
+        .container {
+            margin: 10 auto;
+        }
+        
+        li button {
+            margin-top: 50px;
+        }
+
+        input {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h2>계획표 퍼센트 차이 계산기</h2>
+
+    <div>
+        <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg">
+        <ul class="container">
+            <li>
+                <label>이전 기준시간: </label>
+                <input type="text" id="beforeTimeHour">
+                <label for="beforeTimeHour">시간</label>
+                <input type="text" id="beforeTimeMin">
+                <label for="beforeTimeMin">분 </label>
+            </li>
+            <li>
+				<label>현재 기준시간: </label>
+                <input type="text" id="afterTimeHour">
+                <label for="afterTimeHour">시간</label>
+                <input type="text" id="afterTimeMin">
+                <label for="afterTimeMin">분</label>
+            </li>
+            <li>
+				<button onclick="showTime()">퍼센트(%)변환하기</button>
+			</li>
+        </ul>
+        <div id="showResult"></div>
+    </div>
+
+    <script>
+        /*
+        function showTime() {
+            var beforeTime = document.querySelector('#beforeTime').value;
+            var afterTime = document.querySelector('#afterTime').value;
+            var difference = ((beforeTime - afterTime) / beforeTime)*100
+            var differenceInt = Math.round(difference)
+        */
+        function showTime() {
+            var beforeTimeHour = document.querySelector('#beforeTimeHour').value;
+            var afterTimeHour = document.querySelector('#afterTimeHour').value;
+            var beforeTimeMin = document.querySelector('#beforeTimeMin').value;
+            var afterTimeMin = document.querySelector('#afterTimeMin').value;
+
+            var beforSum = (beforeTimeHour*60)+beforeTimeMin;
+            var afterSum = (afterTimeHour*60)+afterTimeMin;
+
+            var difference = ((afterSum - beforSum) / beforSum)*100;
+            var differenceInt = Math.round(difference);
+        
+            
+            document.querySelector('#showResult').innerHTML = "이전 기준과 현재 기준의 시간 퍼센트 차이는 약 "+"<font>"+differenceInt+"</font>"+ " % 입니다."
+        }    
+            
+    </script>
+
+</body>
+</html>
