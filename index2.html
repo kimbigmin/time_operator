@@ -47,16 +47,16 @@
         <ul class="container">
             <li>
                 <label>이전 기준시간: </label>
-                <input type="text" id="beforeTimeHour">
+                <input type="number" id="beforeTimeHour">
                 <label for="beforeTimeHour">시간</label>
-                <input type="text" id="beforeTimeMin">
+                <input type="number" id="beforeTimeMin">
                 <label for="beforeTimeMin">분 </label>
             </li>
             <li>
 				<label>현재 기준시간: </label>
-                <input type="text" id="afterTimeHour">
+                <input type="number" id="afterTimeHour">
                 <label for="afterTimeHour">시간</label>
-                <input type="text" id="afterTimeMin">
+                <input type="number" id="afterTimeMin">
                 <label for="afterTimeMin">분</label>
             </li>
             <li>
@@ -74,21 +74,23 @@
             var difference = ((beforeTime - afterTime) / beforeTime)*100
             var differenceInt = Math.round(difference)
         */
+        
+
         function showTime() {
+            
             var beforeTimeHour = document.querySelector('#beforeTimeHour').value;
             var afterTimeHour = document.querySelector('#afterTimeHour').value;
-            var beforeTimeMin = document.querySelector('#beforeTimeMin').value;
-            var afterTimeMin = document.querySelector('#afterTimeMin').value;
+            var beforeTimeMin = parseInt(document.querySelector('#beforeTimeMin').value);
+            var afterTimeMin = parseInt(document.querySelector('#afterTimeMin').value);
 
-            var beforSum = (beforeTimeHour*60)+beforeTimeMin;
-            var afterSum = (afterTimeHour*60)+afterTimeMin;
-
-            var difference = ((afterSum - beforSum) / beforSum)*100;
+            var beforeSum =(beforeTimeHour*60)+beforeTimeMin;
+            var afterSum =(afterTimeHour*60)+afterTimeMin;
+            var difference = ((afterSum - beforeSum) / beforeSum)*100;
             var differenceInt = Math.round(difference);
         
-            
+        
             document.querySelector('#showResult').innerHTML = "이전 기준과 현재 기준의 시간 퍼센트 차이는 약 "+"<font>"+differenceInt+"</font>"+ " % 입니다."
-        }    
+        }
             
     </script>
 
