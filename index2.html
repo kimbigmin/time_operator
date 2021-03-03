@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계획표 시간계산</title>
+    <title>Time operator</title>
     <style>
-        body h2 {
-            text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
         }
+
+        body {
+            margin: 0;
+            background-color: #eec0c6;
+            background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+
+        button {
+            border: 0;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: white;
+            color:chocolate;
+            padding: 0.5rem;
+            box-shadow:5px 5px 5px rgba(0, 0, 0, .2)
+        }
+        
 
         body ul {
             text-align: center;
@@ -16,18 +44,14 @@
 
         body ul li {
             padding: 10px;
+            color:white;
+            text-shadow: 1px 1px 4px black;
         }
 
-        body img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 20%;
-            padding: 20px;
-        }
         
         .container {
             margin: 10 auto;
+            margin-right: 2rem;
         }
         
         li button {
@@ -37,61 +61,117 @@
         input {
             width: 70px;
         }
+
+        h1 {
+            margin-bottom: 2.5rem;
+            color:white;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        .img {  
+            width: 40%;
+            height: auto;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+               
+        }
+
+        #showResult {
+            color:white;
+            margin: 20px;
+        }    
+        .input-box {
+            border: 0;
+            box-shadow:2px 5px 5px rgba(0, 0, 0, .2);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+             -webkit-appearance: none;
+             margin: 0;
+        }
+
+        span {
+            color:rgb(233, 39, 71);
+        }
+
+        .reset {
+            margin-left: 3rem;
+        }
     </style>
 </head>
 <body>
-    <h2>계획표 퍼센트 차이 계산기</h2>
+    <h1>Schedule Time Operator</h1>
+
+    <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg" class="img">
 
     <div>
-        <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg">
         <ul class="container">
             <li>
                 <label>이전 기준시간: </label>
-                <input type="number" id="beforeTimeHour">
+                <input type="number" id="beforeTimeHour" class="input-box">
                 <label for="beforeTimeHour">시간</label>
-                <input type="number" id="beforeTimeMin">
+                <input type="number" id="beforeTimeMin" class="input-box">
                 <label for="beforeTimeMin">분 </label>
             </li>
             <li>
 				<label>현재 기준시간: </label>
-                <input type="number" id="afterTimeHour">
+                <input type="number" id="afterTimeHour" class="input-box">
                 <label for="afterTimeHour">시간</label>
-                <input type="number" id="afterTimeMin">
+                <input type="number" id="afterTimeMin" class="input-box">
                 <label for="afterTimeMin">분</label>
             </li>
             <li>
-				<button onclick="showTime()">퍼센트(%)변환하기</button>
-			</li>
+				<button onclick="showTime()">퍼센트(%)로 변환하기</button>
+                <span id="newReset"></span>
+            </li>    
         </ul>
         <div id="showResult"></div>
+		
     </div>
 
     <script>
-        /*
-        function showTime() {
-            var beforeTime = document.querySelector('#beforeTime').value;
-            var afterTime = document.querySelector('#afterTime').value;
-            var difference = ((beforeTime - afterTime) / beforeTime)*100
-            var differenceInt = Math.round(difference)
-        */
-        
 
+ 
         function showTime() {
+
+            const beforeTimeHour = document.querySelector('#beforeTimeHour').value;
+            const afterTimeHour = document.querySelector('#afterTimeHour').value;
+            const beforeTimeMin = parseInt(document.querySelector('#beforeTimeMin').value);
+            const afterTimeMin = parseInt(document.querySelector('#afterTimeMin').value); 
+        
             
-            var beforeTimeHour = document.querySelector('#beforeTimeHour').value;
-            var afterTimeHour = document.querySelector('#afterTimeHour').value;
-            var beforeTimeMin = parseInt(document.querySelector('#beforeTimeMin').value);
-            var afterTimeMin = parseInt(document.querySelector('#afterTimeMin').value);
+            let beforeSum =(beforeTimeHour*60)+beforeTimeMin;
+            let afterSum =(afterTimeHour*60)+afterTimeMin;
+            let difference = ((afterSum - beforeSum) / beforeSum)*100;
+            let differenceInt = Math.round(difference);
+        
+        
+            document.querySelector('#showResult').innerHTML = `이전 기준과 현재 기준의 시간 퍼센트 차이는 약 <span>${differenceInt}%</span> 입니다.`
 
-            var beforeSum =(beforeTimeHour*60)+beforeTimeMin;
-            var afterSum =(afterTimeHour*60)+afterTimeMin;
-            var difference = ((afterSum - beforeSum) / beforeSum)*100;
-            var differenceInt = Math.round(difference);
-        
-        
-            document.querySelector('#showResult').innerHTML = "이전 기준과 현재 기준의 시간 퍼센트 차이는 약 "+"<font>"+differenceInt+"</font>"+ " % 입니다."
+            document.querySelector('#newReset').innerHTML =`<button onclick="resetBtn()" class="reset">초기화</button>`
+            
         }
-            
+        
+        function resetBtn() {
+           
+            document.getElementById('beforeTimeHour').value = '';
+            document.getElementById('afterTimeHour').value = '';
+            document.getElementById('beforeTimeMin').value = '';
+            document.getElementById('afterTimeMin').value = '';
+          
+            document.getElementById('beforeTimeHour').focus();
+
+            const result = document.getElementById('showResult');
+            const removeReset = document.getElementById('newReset');
+
+            result.innerHTML = '';
+            removeReset.innerHTML = '';
+
+        }
     </script>
 
 </body>
