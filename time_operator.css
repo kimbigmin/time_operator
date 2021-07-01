@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: #eec0c6;
+            background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+
+        button {
+            border: 0;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: white;
+            color:chocolate;
+            padding: 0.5rem;
+            box-shadow:5px 5px 5px rgba(0, 0, 0, .2)
+        }
+        
+
+        body ul {
+            text-align: center;
+            list-style-type: none;
+        }
+
+        body ul li {
+            padding: 10px;
+            color:white;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        
+        .container {
+            margin: 10 auto;
+            margin-right: 2rem;
+        }
+        
+        li button {
+            margin-top: 50px;
+        }
+
+        input {
+            width: 70px;
+        }
+
+        h1 {
+            margin-bottom: 2.5rem;
+            color:white;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        .img {  
+            width: 40%;
+            height: auto;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+        }
+
+        #showResult {
+            color:white;
+            margin: 20px;
+        }    
+        .input-box {
+            border: 0;
+            box-shadow:2px 5px 5px rgba(0, 0, 0, .2);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        span {
+            color:rgb(233, 39, 71);
+        }
+
+        .reset {
+            margin-left: 3rem;
+        }
+
+        .tail {
+            color: white;
+            text-align:;
+        }

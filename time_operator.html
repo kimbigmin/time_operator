@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time operator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Schedule Time Operator</h1>
+
+    <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg" class="img">
+
+    <div>
+        <ul class="container">
+            <li>
+                <label>이전 기준시간: </label>
+                <input type="number" id="beforeTimeHour" class="input-box">
+                <label for="beforeTimeHour">시간</label>
+                <input type="number" id="beforeTimeMin" class="input-box">
+                <label for="beforeTimeMin">분 </label>
+            </li>
+            <li>            
+				<label>현재 기준시간: </label>
+                <input type="number" id="afterTimeHour" class="input-box">
+                <label for="afterTimeHour">시간</label>
+                <input type="number" id="afterTimeMin" class="input-box">
+                <label for="afterTimeMin">분</label>
+            </li>
+            <li>
+				<button onclick="showTime()">퍼센트(%)로 변환하기</button>
+                <span id="newReset"></span>
+            </li>    
+        </ul>
+        <div id="showResult"></div>
+		
+    </div>
+    
+    <div class="tail">
+        <p>시간은 금이다. 아껴 쓰자.</p>
+    </div>
+    
+    <script type="text/javascript" src="./javascript.js"></script>
+</body>
+</html>
