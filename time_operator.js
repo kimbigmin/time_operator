@@ -25,7 +25,6 @@
             document.getElementById('afterTimeHour').value = '';
             document.getElementById('beforeTimeMin').value = '';
             document.getElementById('afterTimeMin').value = '';
-          
             document.getElementById('beforeTimeHour').focus();
 
             const result = document.getElementById('showResult');

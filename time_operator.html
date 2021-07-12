@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time operator</title>
+    <title>Schedule Manager</title>
     <link rel="stylesheet" href="time_operator.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li class="nav_li"><a href="#">시간 퍼센트</a></li>
+            <li class="nav_li"><a href="#">평균 시간</a></li>
+            <li class="nav_li"><a href="#">일주일 계산</a></li>
+        </ul>    
+    </nav>
     <h1>Schedule Time Operator</h1>
 
     <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg" class="img">
 
-    <div>
+    <section>
         <ul class="container">
             <li>
                 <label>이전 기준시간: </label>
@@ -33,13 +40,8 @@
             </li>    
         </ul>
         <div id="showResult"></div>
-		
-    </div>
-    
-    <div class="tail">
-        <p>시간은 금이다. 아껴 쓰자.</p>
-    </div>
-    
+    </section>
+
     <script type="text/javascript" src="time_operator.js"></script>
 </body>
 </html>
