@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule Manager</title>
-    <link rel="stylesheet" href="time_operator.css">
-</head>
-<body>
+    <link rel="stylesheet" href="time_operator.css" />
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li class="nav_li"><a href="#">시간 퍼센트</a></li>
-            <li class="nav_li"><a href="#">평균 시간</a></li>
-            <li class="nav_li"><a href="#">일주일 계산</a></li>
-        </ul>    
+      <ul>
+        <li class="nav_li"><a href="#">시간 퍼센트</a></li>
+        <li class="nav_li"><a href="#">평균 시간</a></li>
+        <li class="nav_li"><a href="#">일주일 계산</a></li>
+      </ul>
     </nav>
     <h1>Schedule Time Operator</h1>
 
-    <img src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg" class="img">
+    <img
+      src="https://www.flaticon.com/svg/static/icons/svg/66/66403.svg"
+      class="img"
+    />
 
     <section>
-        <ul class="container">
-            <li>
-                <label>이전 기준시간: </label>
-                <input type="number" id="beforeTimeHour" class="input-box">
-                <label for="beforeTimeHour">시간</label>
-                <input type="number" id="beforeTimeMin" class="input-box">
-                <label for="beforeTimeMin">분 </label>
-            </li>
-            <li>            
-				<label>현재 기준시간: </label>
-                <input type="number" id="afterTimeHour" class="input-box">
-                <label for="afterTimeHour">시간</label>
-                <input type="number" id="afterTimeMin" class="input-box">
-                <label for="afterTimeMin">분</label>
-            </li>
-            <li>
-				<button onclick="showTime()">퍼센트(%)로 변환하기</button>
-                <span id="newReset"></span>
-            </li>    
-        </ul>
-        <div id="showResult"></div>
+      <ul class="container">
+        <li>
+          <label>이전 기준시간: </label>
+          <input type="number" id="beforeTimeHour" class="input-box" />
+          <label for="beforeTimeHour">시간</label>
+          <input type="number" id="beforeTimeMin" class="input-box" />
+          <label for="beforeTimeMin">분 </label>
+        </li>
+        <li>
+          <label>현재 기준시간: </label>
+          <input type="number" id="afterTimeHour" class="input-box" />
+          <label for="afterTimeHour">시간</label>
+          <input type="number" id="afterTimeMin" class="input-box" />
+          <label for="afterTimeMin">분</label>
+        </li>
+        <li>
+          <button onclick="showTime()">퍼센트(%)로 변환하기</button>
+          <span id="newReset"></span>
+        </li>
+      </ul>
+      <div id="showResult"></div>
     </section>
 
     <script type="text/javascript" src="time_operator.js"></script>
-</body>
+  </body>
 </html>
