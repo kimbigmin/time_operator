@@ -1,37 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
-    padding: 1rem;
-    margin: 0;
-    background-color: #eec0c6;
-    background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg);
     background-size: cover;
-    
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
 
+header {
+    display: flex;
+    background-color: #7A715D;
+    
+}
+
+
+header h1 {
+    padding: 10px;
+}
+
+nav {
+
+    margin-bottom: 4rem;;
+    border-radius: 7px;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0 50px;
+    display: flex;
+    margin-top: 5px;
+    font-size: 1rem;
+    
+    
+}
+
+
+
+label {
+    font-size: 1.5rem;
 }
 
 button {
     border: 0;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    background-color: white;
-    color:chocolate;
-    padding: 0.5rem;
+    background-color: #FADC7A;
+    color: #3B382E;
+    padding: 1rem;
     box-shadow:5px 5px 5px rgba(0, 0, 0, .2)
 }
 
+.result_text {
+    position: relative;
+    font-weight: bold;
+    font-size: 400;
+
+}
 
 body ul {
     text-align: center;
@@ -46,8 +79,9 @@ body ul li {
 
 
 .container {
-    margin: 10 auto;
-    margin-right: 2rem;
+    position: relative;
+    top: 150px;
+    left: 300px;
 }
 
 li button {
@@ -59,7 +93,6 @@ input {
 }
 
 h1 {
-    margin-bottom: 2.5rem;
     color:white;
     text-shadow: 1px 1px 4px black;
 }
@@ -73,8 +106,10 @@ h1 {
 }
 
 #showResult {
-    color:white;
-    margin: 20px;
+    display: block;
+    position: relative;
+    top: 200px;
+    left: 600px;
 }    
 .input-box {
     border: 0;
@@ -90,7 +125,8 @@ margin: 0;
 }
 
 span {
-    color:rgb(233, 39, 71);
+    color: #F57100;
+    font-size: 1.5rem;
 }
 
 .reset {
@@ -99,18 +135,6 @@ span {
 
 
 
-nav {
-    border: 2px dotted white;
-    margin-bottom: 4rem;;
-    border-radius: 7px;
-}
-
-nav ul {
-    padding: 0;
-    display: flex;
-    
-}
-
 a {
     text-decoration-line: none;
     color: white;
@@ -118,4 +142,13 @@ a {
 
 .nav_li {
     padding: 20px;
+}
+
+footer {
+    background-color: #7A715D;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+
 }

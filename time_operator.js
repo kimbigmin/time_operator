@@ -13,7 +13,7 @@ function showTime() {
     let differenceInt = Math.round(difference);
 
 
-    document.querySelector('#showResult').innerHTML = `이전 기준과 현재 기준의 시간 퍼센트 차이는 약 <span>${differenceInt}%</span> 입니다.`
+    document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 기준과 현재 기준의 시간 퍼센트 차이는 약 <span>${differenceInt}%</span> 입니다.</p>`
 
     document.querySelector('#newReset').innerHTML =`<button onclick="resetBtn()" class="reset">초기화</button>`
     
