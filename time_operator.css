@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+html {
+    font-size: 16px;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -10,14 +15,18 @@
 body {
     background-image: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg);
     background-size: cover;
-    padding: 0;
+    background-repeat: no-repeat;
+    background-position: bottom;
     margin: 0;
+    padding: 0;
     height: 100vh;
+
 }
 
 header {
     display: flex;
     background-color: #7A715D;
+    max-width: 100%;
     
 }
 
@@ -27,7 +36,6 @@ header h1 {
 }
 
 nav {
-
     margin-bottom: 4rem;;
     border-radius: 7px;
     margin: 0;
@@ -38,10 +46,15 @@ nav ul {
     display: flex;
     margin-top: 5px;
     font-size: 1rem;
-    
-    
+
 }
 
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
+}
 
 
 label {
@@ -60,9 +73,10 @@ button {
 }
 
 .result_text {
-    position: relative;
+    width: 70%;
     font-weight: bold;
     font-size: 400;
+    display: flex;
 
 }
 
@@ -77,11 +91,14 @@ body ul li {
     text-shadow: 1px 1px 4px black;
 }
 
+.time_container {
+    
+}
 
 .container {
     position: relative;
-    top: 150px;
-    left: 300px;
+    top: 10rem;
+    left: 20rem;
 }
 
 li button {
@@ -97,19 +114,12 @@ h1 {
     text-shadow: 1px 1px 4px black;
 }
 
-.img {  
-    width: 30%;    
-    margin: 0;
-    text-align: center;
-    margin-bottom: 1.5rem;
 
-}
+
 
 #showResult {
-    display: block;
-    position: relative;
-    top: 200px;
-    left: 600px;
+    display: flex;
+
 }    
 .input-box {
     border: 0;
@@ -150,5 +160,12 @@ footer {
     bottom: 0px;
     width: 100%;
     height: 50px;
+}
 
+footer .footer_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.5rem;
+    padding: 1rem;
 }
