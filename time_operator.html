@@ -4,52 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule Manager</title>
-    <link rel="stylesheet" href="time_operator.css" />
+    <link rel="stylesheet" href="./time_operator2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <h1>Time Operator</h1>
-      <nav>
-        <ul>
-          <li class="nav_li"><a href="#">시간 퍼센트</a></li>
-          <li class="nav_li"><a href="#">평균 시간 (예정)</a></li>
-          <li class="nav_li"><a href="#">일주일 계산 (예정)</a></li>
-        </ul>
-      </nav>
-    </header> 
 
     <div class="container">
-      <ul class="time_container">
-        <li>
-          <label>Past Time :</label>
-          <input type="number" id="beforeTimeHour" class="input-box" />
-          <label for="beforeTimeHour">h</label>
-          <input type="number" id="beforeTimeMin" class="input-box" />
-          <label for="beforeTimeMin">m</label>
-        </li>
-        <li>
-          <label>Current Time : </label>
-          <input type="number" id="afterTimeHour" class="input-box" />
-          <label for="afterTimeHour">h</label>
-          <input type="number" id="afterTimeMin" class="input-box" />
-          <label for="afterTimeMin">m</label>
-        </li>
-        <li>
-          <button onclick="showTime()">Convert To Percentage !</button>
-          <span id="newReset"></span>
-        </li>
-      </ul>
-      <div id="showResult"></div>
-    </div>
-    <footer>
-      <ul>
-        <li class="footer_list">Producted by Kim</li>
-      </ul>
-    </footer>
+    <!-- Header and nav bar -->
+      <div class="header">
+        <header>
+          <h2>Time Operator</h2>
+          <nav>
+            <ul>
+              <li class="nav_li"><a href="#">시간 퍼센트</a></li>
+              <li class="nav_li"><a href="#">평균 시간 (예정)</a></li>
+              <li class="nav_li"><a href="#">일주일 계산 (예정)</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>  
 
+
+      <!--     main      -->
+      <div class="main">
+        <ul class="sections">
+          <li class="main-sec past-section">
+            <label>Past time :</label>
+            <input type="number" id="beforeTimeHour" class="input-box" />
+            <label for="beforeTimeHour">h</label>
+            <input type="number" id="beforeTimeMin" class="input-box" />
+            <label for="beforeTimeMin">m</label>
+          </li>
+          <li class="main-sec current-section">
+            <label>Current time : </label>
+            <input type="number" id="afterTimeHour" class="input-box" />
+            <label for="afterTimeHour">h</label>
+            <input type="number" id="afterTimeMin" class="input-box" />
+            <label for="afterTimeMin">m</label>
+          </li>
+          <li class="main-sec result-section">
+            <button onclick="showTime()" class="show-time-btn">Convert To Percentage !</button>
+            <span id="newReset"></span>
+          </li>
+        </ul>
+        <div id="showResult" class="show-result"></div>
+      </div>
+
+
+      <!-- Footer -->
+      <footer>
+        <ul>
+          <li class="footer-list">Producted by Kimbigmin</li>
+          <li class="footer-list">Email: alsrb2918@gmail.com</li>
+          <li class="footer-list">Github: @kimbigmin</li>
+        </ul>
+      </footer>
+
+    </div>
+    <!-- script -->
     <script type="text/javascript" src="time_operator.js"></script>
   </body>
 </html>
