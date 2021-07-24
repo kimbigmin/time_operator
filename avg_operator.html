@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Manager</title>
+    <link rel="stylesheet" href="./time_operator2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+    <!-- Header and nav bar -->
+      <div class="header">
+        <header>
+          <h2>Time Operator</h2>
+          <nav>
+            <ul>
+              <li class="nav_li"><a href="./time_operator.html">시간 퍼센트 구하기</a></li>
+              <li class="nav_li"><a href="./avg_operator.html">평균 시간 구하기</a></li>
+              <li class="nav_li"><a href="./week_operator.html">일주일 시간 계산</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>  
+
+
+      <!--     main      -->
+      <div class="avg-main">
+        <ul class="avg-sections">
+
+
+          <li class="main-sec time-section">
+            <label>MON :</label>
+            <div class="input-container">
+              <input type="number" id="monHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="monMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>  
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>TUE : </label>
+            <div class="input-container">  
+              <input type="number" id="tueHour" class="input-box" />
+              <label for="afterTimeHour">h</label>
+              <input type="number" id="tueMin" class="input-box" />
+              <label for="afterTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>WEN :</label>
+            <div class="input-container">  
+              <input type="number" id="wenHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="wenMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>THU :</label>
+            <div class="input-container">  
+              <input type="number" id="thuHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="thuMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>FRI :</label>
+            <div class="input-container">  
+              <input type="number" id="friHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="friMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>SAT :</label>
+            <div class="input-container">  
+              <input type="number" id="satHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="satMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec time-section">
+            <label>SUN :</label>
+            <div class="input-container">  
+              <input type="number" id="sunHour" class="input-box" />
+              <label for="beforeTimeHour">h</label>
+              <input type="number" id="sunMin" class="input-box" />
+              <label for="beforeTimeMin">m</label>
+            </div>
+          </li>
+
+
+          <li class="main-sec result-section">
+            <button onclick="getAverageTime()" class="show-time-btn">Return Average Time!</button>
+            <div id="newReset"></div>
+          </li>
+
+
+        </ul>
+        <div id="showResult" class="avg-show-result"></div>
+      </div>
+
+
+      <!-- Footer -->
+      <footer>
+        <ul>
+          <li class="footer-list">Producted by Kimbigmin</li>
+          <li class="footer-list">Email: alsrb2918@gmail.com</li>
+          <li class="footer-list">Github: @kimbigmin</li>
+        </ul>
+      </footer>
+
+    </div>
+    <!-- script -->
+    <script type="text/javascript" src="time_operator.js"></script>
+  </body>
+</html>
