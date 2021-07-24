@@ -2,6 +2,12 @@
 
 html {
     font-size: 16px;
+    background: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
 }
 
 * {
@@ -11,23 +17,18 @@ html {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-body {
-  background-image: url(/time_operator/images/amanda-jones-CcIIao_-Eow-unsplash.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
 
 
 .container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   width: 1000px;
   margin: 0 auto;
   margin-top: 20px;
   height: 100vh;
   justify-content: space-between;
+  
   
 }
 
@@ -68,6 +69,11 @@ nav ul {
   
 }
 
+.nav_li a:hover {
+  text-shadow:3px 4px 4px rgba(30, 0, 0, 1);
+  transition-duration: 0.5s;
+}
+
 .nav_li a {
   text-decoration-line: none;
   color: white;
@@ -76,6 +82,17 @@ nav ul {
 
 
 /* Main */
+
+.avg-main {
+  margin-top: 5rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
 
 .main {
   margin-top: 10rem;
@@ -90,7 +107,7 @@ nav ul {
 .sections {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   height: auto;
 }
@@ -122,10 +139,27 @@ margin: 0;
   text-align: center;
 }
 
+.avg-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+.time-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-container {
+  margin-left: 10px;
+}
+
+
 .result-section {
   display: flex;
   margin-top: 60px;
-  align-items: center;
+  justify-content: flex-end;
   
 }
 
@@ -138,29 +172,38 @@ margin: 0;
   margin-right: 40px;
   box-shadow:2px 5px 5px rgba(0, 0, 0, .2);
   
-
-  
 }
+
 
 .reset {
   padding: 16px;
   color: rgba(233,29,20, 0.8);
+  margin-right: 0;
 }
 
 .show-result {
   margin-top: 4rem;
   font-size: 1.2rem;
   transition-duration: 2s;
+  margin-right: 2.8rem;
+  
+}
+
+.avg-show-result {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  transition-duration: 2s;
+  margin-right: 2rem;
   
 }
 
 
 
-.result_text span {
-    color: rgba(233,29,20, 0.8);
-    font-weight: bolder;
-    
+
+.result_text_avg strong {
+  color: rgba(233,29,20, 0.8);
 }
+
 
 
 /* Footer */
