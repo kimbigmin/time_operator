@@ -110,7 +110,7 @@ function getAverageTime() {
     const resultMin = Math.floor(((ResultToOper - resultHour)* 0.6) * 100);
     
 
-    document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText">평균 시간은 <strong>${resultHour}시간 ${resultMin}분</strong> 입니다.</p>`
+    document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText">평균 취침 & 기상시간은 <strong>${resultHour}시 ${resultMin}분</strong> 입니다.</p>`
 
     document.querySelector('#newReset').innerHTML =`<button onclick="avgResetBtn()" class="reset" id="avgBtn">Reset</button>`
     
