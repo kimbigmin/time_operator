@@ -156,3 +156,68 @@ function getSumTime() {
     document.querySelector('#newReset').innerHTML =`<button onclick="avgResetBtn()" class="reset" id="avgBtn">Reset</button>`
     
 }
+
+
+
+
+// 메뉴바 만들기
+
+const menubar = document.querySelector("#menubar");
+
+let menuBox = document.createElement('div');
+let menuList = document.createElement('ul');
+let percentPage = document.createElement('li');
+let averagePage = document.createElement('li');
+let weeklyPage = document.createElement('li');
+
+let menuStatus = false;
+
+const menubarOpen = function() {
+
+    // 메뉴바 박스 DOM
+    menuBox.id = 'menuBox';
+    menuBox.className = 'menuBox';
+    document.body.appendChild(menuBox);
+
+    // 메뉴바 ul DOM   
+    menuList.id = 'menuList'
+    menuList.className = 'menuList'
+    document.querySelector("#menuBox").appendChild(menuList);
+
+    // 메뉴바 li DOM
+    percentPage.className = 'menubar-page';
+    percentPage.innerHTML = '<a href="./time_operator.html">시간 퍼센트 구하기</a>';
+    document.querySelector("#menuList").appendChild(percentPage);
+
+    averagePage.className = 'menubar-page';
+    averagePage.innerHTML = '<a href="./avg_operator.html">평균시간 구하기</a>';
+    document.querySelector("#menuList").appendChild(averagePage);
+
+    weeklyPage.className = 'menubar-page';
+    weeklyPage.innerHTML = '<a href="./week_operator.html">일주일 시간합계 구하기</a>';
+    document.querySelector("#menuList").appendChild(weeklyPage);
+
+};
+
+
+const menubarClose = function() {
+    
+    document.body.removeChild(menuBox);
+
+};
+
+
+let toggleClick = function() {
+
+    if(menuStatus) {
+        menubarClose();
+        menuStatus = false;
+    } else {
+        menubarOpen();
+        menuStatus = true;
+    };
+
+}
+
+
+menubar.addEventListener('click', toggleClick);
