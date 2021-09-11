@@ -15,11 +15,11 @@ function showTime() {
 
     if (differenceInt > 0) {
         
-        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:red;">${differenceInt}%</span> <strong style="color:red;">증가</strong>하였습니다!</p>`
+        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:red;">${differenceInt}% <strong style="color:red;">증가</strong></span> 하였습니다!</p>`
 
         document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
     } else {
-        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:blue;">${differenceInt}%</span> <strong style="color:blue;">감소</strong>하였습니다.</p>`
+        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:blue;">${differenceInt}% <strong style="color:blue;">감소</strong></span> 하였습니다.</p>`
 
         document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
     }
@@ -66,7 +66,7 @@ function avgResetBtn() {
 
     // result.innerHTML = '';
     // removeReset.innerHTML = '';
-
+    document.getElementById('monHour').focus();
     document.getElementById('avgText').style.visibility = "hidden";
     document.getElementById('avgBtn').style.display= "none";
 }   
