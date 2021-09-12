@@ -92,6 +92,7 @@ nav ul {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: 0.8rem;
     
   }
 
@@ -124,7 +125,7 @@ nav ul {
 
   .menuBox {
     position: absolute;
-    top: 87px;
+    top: 75px;
     text-align: center;
     width: 100%;
     
@@ -157,9 +158,16 @@ nav ul {
 
   .main {
     margin-top: 10rem;
+    margin-left: 1rem;
     align-items: center;
   
   }
+
+  .result_text {
+    /* margin-left: 50px; */
+  }
+
+
 
 }
 
