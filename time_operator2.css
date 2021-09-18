@@ -172,7 +172,14 @@ nav ul {
 }
 
 
+
 /* Main */
+
+.description {
+  color: white;
+  max-width: 400px;
+}
+
 
 .avg-main {
   margin-top: 5rem;
