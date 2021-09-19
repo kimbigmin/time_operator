@@ -92,12 +92,18 @@ nav ul {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    
     
   }
 
   .header header{
     justify-content: space-between;
+  }
+
+
+  .avg-main {
+    margin-left: 1rem;
   }
 
 
@@ -114,7 +120,6 @@ nav ul {
   } 
 
 
-
   .result_text {
     color: white;
   }
@@ -125,7 +130,7 @@ nav ul {
 
   .menuBox {
     position: absolute;
-    top: 75px;
+    top: 66px;
     text-align: center;
     width: 100%;
     
@@ -138,7 +143,7 @@ nav ul {
     align-items: center;
     list-style-type: none;
     background-color: white;
-    height: 10.7rem;
+    height: 10.6rem;
     
     
 
