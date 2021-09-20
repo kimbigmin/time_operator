@@ -27,7 +27,7 @@ function showTime() {
 
         document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
     } else {
-        document.querySelector('#showResult').innerHTML = `<p class="result_text" style="color:yellow; font-weight:bold; margin-left:3rem;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
+        document.querySelector('#showResult').innerHTML = `<p class="result_text" style="color:#F6A000; font-weight:bold; margin-left:3rem;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
 
         document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
     }
@@ -119,7 +119,7 @@ function getAverageTime() {
 
     if(isNaN(resultHour) && isNaN(resultMin)) {    
 
-        document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText" style="color:yellow; margin-left: 6rem; font-weight:bold;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
+        document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText" style="color:#F6A000; margin-left: 6rem; font-weight:bold;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
 
         document.querySelector('#newReset').innerHTML =`<button onclick="avgResetBtn()" class="reset" id="avgBtn">Reset</button>`
 
@@ -169,7 +169,7 @@ function getSumTime() {
 
     if(isNaN(resultHour) && isNaN(resultMin)) {
 
-        document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText" style="color:yellow; margin-left: 6rem; font-weight:bold;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
+        document.querySelector('#showResult').innerHTML = `<p class="result_text_avg" id="avgText" style="color:#F6A000; margin-left: 6rem; font-weight:bold;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
 
         document.querySelector('#newReset').innerHTML =`<button onclick="avgResetBtn()" class="reset" id="avgBtn">Reset</button>`
 
