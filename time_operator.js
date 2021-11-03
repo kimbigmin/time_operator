@@ -19,17 +19,23 @@ function showTime() {
     // 결과값 도출  
     if (differenceInt > 0) {
         
-        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:red;">${differenceInt}% <strong style="color:red;">증가</strong></span> 하였습니다!</p>`
+        document.querySelector('#showResult').innerHTML = 
+        `<p class="result_text">이전 시간보다 약 <span style="color:red;">${differenceInt}% <strong style="color:red;">증가</strong></span> 하였습니다!</p>`
 
-        document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
+        document.querySelector('#newReset').innerHTML =
+        `<button onclick="percentResetBtn()" class="reset">Reset</button>`
     } else if(differenceInt <= 0) {
-        document.querySelector('#showResult').innerHTML = `<p class="result_text">이전 시간보다 약 <span style="color:blue;">${differenceInt}% <strong style="color:blue;">감소</strong></span> 하였습니다.</p>`
+        document.querySelector('#showResult').innerHTML = 
+        `<p class="result_text">이전 시간보다 약 <span style="color:blue;">${differenceInt}% <strong style="color:blue;">감소</strong></span> 하였습니다.</p>`
 
-        document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
+        document.querySelector('#newReset').innerHTML =
+        `<button onclick="percentResetBtn()" class="reset">Reset</button>`
     } else {
-        document.querySelector('#showResult').innerHTML = `<p class="result_text" style="color:#F6A000; font-weight:bold; margin-left:3rem;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
+        document.querySelector('#showResult').innerHTML = 
+        `<p class="result_text" style="color:#F6A000; font-weight:bold; margin-left:3rem;">시간이 입력되지 않았습니다. 시간을 정확히 입력해주세요.</p>`
 
-        document.querySelector('#newReset').innerHTML =`<button onclick="percentResetBtn()" class="reset">Reset</button>`
+        document.querySelector('#newReset').innerHTML =
+        `<button onclick="percentResetBtn()" class="reset">Reset</button>`
     }
 }
 
@@ -186,16 +192,16 @@ function getSumTime() {
 
 
 // 메뉴바 만들기
-
 const menubar = document.querySelector("#menubar");
 
-let menuBox = document.createElement('div');
-let menuList = document.createElement('ul');
-let percentPage = document.createElement('li');
-let averagePage = document.createElement('li');
-let weeklyPage = document.createElement('li');
+const menuBox = document.createElement('div');
+const menuList = document.createElement('ul');
+const percentPage = document.createElement('li');
+const averagePage = document.createElement('li');
+const weeklyPage = document.createElement('li');
 
-let menuStatus = false;
+const menuStatus = false;
+
 
 const openMenubar = function() {
 
@@ -224,15 +230,16 @@ const openMenubar = function() {
 
 };
 
-
 const menubarClose = function() {
     
-    document.body.removeChild(menuBox);
-
+    menuBox.style.transitionProperty = 'width';
+    menuBox.style.transitionDuration = '0.5s';
+    menuBox.style.width = '-300px';
+    
 };
 
 
-let toggleClick = function() {
+const toggleClick = function() {
 
     if(menuStatus) {
         menubarClose();
@@ -243,6 +250,5 @@ let toggleClick = function() {
     };
 
 }
-
 
 menubar.addEventListener('click', toggleClick);
