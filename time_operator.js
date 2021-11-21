@@ -1,7 +1,6 @@
 
 function showTime() {
 
-
     // DOM Setting 
     const beforeTimeHour = document.querySelector('#beforeTimeHour').value;
     const afterTimeHour = document.querySelector('#afterTimeHour').value;
@@ -15,7 +14,6 @@ function showTime() {
     let differenceInt = Math.round(difference);
 
     
-
     // 결과값 도출  
     if (differenceInt > 0) {
         
@@ -38,7 +36,6 @@ function showTime() {
         `<button onclick="percentResetBtn()" class="reset">Reset</button>`
     }
 }
-
 
 
 function percentResetBtn() {
