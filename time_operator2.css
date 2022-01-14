@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 
 html {
-    font-size: 16px;
-    background: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
+  font-size: 16px;
+  background: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
-
-
 
 .container {
   display: flex;
@@ -27,22 +25,19 @@ html {
   margin: 0 auto;
   height: 100vh;
   justify-content: space-between;
-  
-  
 }
-
 
 /* Header and nav-bar */
 
-
 .header header {
-  display: inline;
-  position: fixed;
+  display: flex;
+  /* position: fixed; */
   width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
-
 }
 
 header h2 {
@@ -61,19 +56,17 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 
-.nav_li  {
+.nav_li {
   display: flex;
   padding: 0 50px;
   color: white;
   align-items: center;
-  
 }
 
 .nav_li a:hover {
-  text-shadow:3px 4px 4px rgba(30, 0, 0, 1);
+  text-shadow: 3px 4px 4px rgba(30, 0, 0, 1);
   transition-duration: 0.5s;
 }
 
@@ -82,43 +75,36 @@ nav ul {
   color: white;
 }
 
-.fa-bars:before {
-  display: inline;
-} 
+#menubar {
+  display: none;
+}
 
-@media only screen and (min-width: 200px) and (max-width: 760px){
-  
+@media only screen and (min-width: 200px) and (max-width: 760px) {
   html {
     font-size: 16px;
-    background: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg) no-repeat fixed;
+    background: url(./images/amanda-jones-CcIIao_-Eow-unsplash.jpg) no-repeat
+      fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-size: 0.7rem;
-    
-    
   }
-
-
-
 
   .avg-main {
     margin-left: 1rem;
   }
 
-
   .nav_li {
     display: none;
-  } 
-  
+  }
+
   .fa-bars:before {
     display: inline;
-    color:white;
+    color: white;
     font-size: 1.2rem;
     cursor: pointer;
-  } 
-
+  }
 
   .result_text {
     color: white;
@@ -130,15 +116,11 @@ nav ul {
 
   .menuBox {
     position: absolute;
-    top:0;
+    top: 0;
     left: 100px;
     text-align: center;
     width: 300px;
   }
-
-  
-
-
 
   .menuList {
     display: flex;
@@ -147,16 +129,12 @@ nav ul {
     list-style-type: none;
     background-color: white;
     height: 10.6rem;
-    
-    
-
   }
 
   .menubar-page {
     width: 25rem;
     padding: 1rem;
     border-bottom: 0.1px solid rgb(196, 196, 196);
-    
   }
 
   .menubar-page a {
@@ -168,18 +146,12 @@ nav ul {
     margin-top: 10rem;
     margin-left: 1rem;
     align-items: center;
-  
   }
 
-  .result_text {
-    /* margin-left: 50px; */
+  #menubar {
+    display: inline;
   }
-
-
-
 }
-
-
 
 /* Main */
 
@@ -187,7 +159,6 @@ nav ul {
   color: white;
   max-width: 400px;
 }
-
 
 .avg-main {
   margin-top: 5rem;
@@ -199,7 +170,6 @@ nav ul {
   height: 100%;
 }
 
-
 .main {
   margin-top: 10rem;
   display: flex;
@@ -209,8 +179,6 @@ nav ul {
   height: 100%;
   margin-right: 4rem;
 }
-
-
 
 .sections {
   display: flex;
@@ -234,13 +202,13 @@ nav ul {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
--webkit-appearance: none;
-margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .input-box {
   border: 0;
-  box-shadow:2px 5px 5px rgba(0, 0, 0, .2);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   font-size: 1rem;
   width: 80px;
@@ -251,7 +219,6 @@ margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
 }
 
 .time-section {
@@ -263,40 +230,34 @@ margin: 0;
   margin-left: 10px;
 }
 
-
 .past-section {
-  
-  align-self:flex-end;
+  align-self: flex-end;
 }
 
 .current-section {
   align-self: flex-end;
 }
 
-
 .result-section {
   display: flex;
   margin-top: 60px;
   justify-content: flex-end;
-  
 }
 
-
-.show-time-btn , .reset {
+.show-time-btn,
+.reset {
   font-size: 1rem;
   padding: 1rem;
   border: 0px;
   border-radius: 5px;
   margin-right: 40px;
-  box-shadow:2px 5px 5px rgba(0, 0, 0, .2);
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
-  
 }
-
 
 .reset {
   padding: 16px;
-  color: rgba(233,29,20, 0.8);
+  color: rgba(233, 29, 20, 0.8);
   margin-right: 0;
 }
 
@@ -305,45 +266,34 @@ margin: 0;
   font-size: 1.2rem;
   transition: all 500ms;
   margin-right: 2.8rem;
-  
 }
-
-
 
 .avg-show-result {
   margin: 2rem 0;
   font-size: 1.2rem;
   transition-duration: 2s;
   margin-right: 2rem;
-  
 }
-
 
 .result_text span {
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   padding: 5px;
 }
-
-
 
 .result_text_avg strong {
-  color: rgba(233,29,20, 0.8);
-  background-color: rgba(255,255,255,0.8);
+  color: rgba(233, 29, 20, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 5px;
 }
 
-
-
 /* Footer */
-
 
 footer {
   display: flex;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem;
-  
 }
 
 footer ul {
@@ -358,9 +308,4 @@ footer ul {
   font-size: 0.5rem;
 }
 
-
-
-
 /* Menu Bar */
-
-
