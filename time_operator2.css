@@ -117,9 +117,9 @@ nav ul {
   .menuBox {
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 600px;
+    width: 100%;
     text-align: center;
-    width: 300px;
   }
 
   .menuList {
@@ -142,10 +142,22 @@ nav ul {
     color: black;
   }
 
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+  }
+
   .main {
     margin-top: 10rem;
-    margin-left: 1rem;
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin-right: 4rem;
   }
 
   #menubar {
